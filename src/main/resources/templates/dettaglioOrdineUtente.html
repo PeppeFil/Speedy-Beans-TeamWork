@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Ordine</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/tabelle.css">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<div class="header">
+    <div class="left-side">
+        <div class="logo">
+         <img src="/img/logo/logo-speedybeans.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <form action="/prodotto/cerca-prodotti" method="get">
+                <input type="text" name="brand" id="src-utn-brand" placeholder="Cerca prodotti per brand">
+            </form>
+        </div>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/prodotto/tutti-i-prodotti" class="">Prodotti</a></li>
+            <li><a href="/utente/ordini" class="">I miei ordini</a></li>
+            <li><a href="/utente/profile" class="">I miei dati</a></li>
+        </ul>
+    </nav>
+
+    <div class="right-side">
+        <div class="auth-buttons">
+            <div class="cart">
+                <a href="/utente/vai-al-carrello"><img src="/img/cart.png" alt="Carrello"></a>
+            </div>
+            <div>
+                <a href="/utente/ordini">
+                    <button class="back-button">INDIETRO</button>
+                </a>
+            </div>
+            <div>
+                <a href="/logout"><button class="logout-button">LOGOUT</button></a>
+            </div>
+        </div>
+    </div> 
+</div> <!-- ======= Chiusura Header ======= -->
+
+<div class="tb-container">
+    <table class="tb-oriz">
+        <thead>
+            <tr>
+                <th>Genere</th>
+                <th>Brand</th>
+                <th>Prezzo</th>
+                <th>Disponibilità</th>
+                <th>Peso</th>
+                <th>Tipologia</th>
+                <th>Data Produzione</th>
+                <th>Data Scadenza</th>
+                <th>Formato</th>
+                <th>Utilizzo</th>
+                <th>Colore</th>
+                <th>Modello</th>
+                <th>Serbatoio</th>
+            </tr>
+        </thead>
+        <tbody>   
+            <tr th:each="prodotto : ${listaProdotti}">
+                <td th:text="${#strings.equals(prodotto.genere, 'M') ? 'Macchinetta' : 'Caffè'}"></td>
+                <td th:text="${prodotto.brand}"></td>
+                <td th:text="${prodotto.prezzo}"></td>
+                <td th:text="${prodotto.disponibilita}"></td>
+                <td th:text="${prodotto.peso}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'C') ? prodotto.tipologia : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'C') ? prodotto.dataProduzione : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'C') ? prodotto.dataScadenza : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'C') ? prodotto.formato : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'M') ? prodotto.utilizzo : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'M') ? prodotto.colore : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'M') ? prodotto.modello : '-'}"></td>
+                <td th:text="${#strings.equals(prodotto.genere, 'M') ? prodotto.serbatoio : '-'}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <table class="tb-oriz">
+        <tbody>
+            <tr>
+                <th>Totale</th>
+                <td th:text="${ordine.totale}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div id="message-modal" th:if="${message} != null">
+        <button onclick="document.querySelector('#message-modal').hidden=true">Chiudi</button>
+        <hr>
+        <p th:text="${message}"></p>
+    </div>
+</body>
+</html>

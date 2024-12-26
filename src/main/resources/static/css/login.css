@@ -1,0 +1,139 @@
+/* Font */
+@import url(https://db.onlinewebfonts.com/c/066ce24dae3730ed6c648b09efaea93a?family=Acumin+Variable+Concept);
+
+@font-face {
+  font-family: "Acumin Variable Concept Extra Condensed Medium Italic";
+  src: url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot");
+  src: url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.svg#Acumin Variable Concept Extra Condensed Medium Italic") format("svg");
+}
+
+:root {
+  --default-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --heading-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --nav-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --foot-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+}
+
+/*Colori globali*/
+:root{
+    --defoult-text-color: #36251E;
+    --heading-color: #BD8544;
+    --interaction-color: #A1450B;
+    --contrast-color: #ffffff;
+    --body-color: #AC773A;
+    --bg-color: #DDD0AE;
+    --botton-color: #723C1A;
+}
+
+/* General styling */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: var(--default-font);
+    background-color: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container styling */
+.login-container {
+    background-color: #b27335;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 450px;
+    height: 300px;
+}
+
+
+/* Logo styling */
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo .logo-uno img {
+    width: 130px;
+    height: 118px;
+}
+
+.logo .logo-due img {
+    width: 447px;
+    height: 87px;
+}
+
+/* Form styling */
+.login-form {
+    margin-top: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 50px; /* Distanza tra i text box */
+}
+
+.input-group input {
+    width: 300px;
+    height: 55px;
+    border-radius: 15px;
+    padding-left: 70px; /* Spazio per l'icona */
+    font-size: 20px;
+    font-style: italic;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 40px;
+    top: 3.5px;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.login-form button {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border-color: black;
+    border-radius: 15px;
+    margin: 50px auto 0;
+    font-family: var(--default-font);
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.login-form .login-cafe img {
+    width: 35px;
+    height: 25px;
+}
+
+#message-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(209, 166, 86);
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    z-index: 9999;
+}

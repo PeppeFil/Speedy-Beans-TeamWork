@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Utente</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/carousel.js"></script>
+</head>
+
+
+<body>
+ <!-- ======= Header ======= -->
+ <div class="header">
+    <div class="left-side">
+        <div class="logo">
+            <img src="/img/logo/logo-speedybeans.png" alt="Logo">
+        </div>
+            <div class="search-bar">
+                <form action="/prodotto/cerca-prodotti" method="get">
+                    <input type="text" name="brand" id="src-utn-brand" placeholder="Cerca prodotti per brand">
+                </form>
+            </div>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/prodotto/tutti-i-prodotti" class="">Prodotti</a></li>
+            <li><a href="/ordine/tutti-gli-ordini" class="">Ordini</a></li>
+            <li><a href="/utente/tutti-gli-utenti" class="">Utenti</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <div>
+            <a href="/logout"><button class="logout-button">LOGOUT</button></a>
+        </div>
+    </div>
+    </div><!-- ======= Chiusura Header ======= -->
+
+    <div>
+        <h1>Benvenuta <span th:text="|${persona.nome} ${persona.cognome}|"></span></h1>
+    </div>
+</body>
+</html>

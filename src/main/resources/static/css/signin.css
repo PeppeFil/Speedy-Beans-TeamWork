@@ -1,0 +1,158 @@
+/* -- Font -- */
+@import url(https://db.onlinewebfonts.com/c/066ce24dae3730ed6c648b09efaea93a?family=Acumin+Variable+Concept);
+
+@font-face {
+  font-family: "Acumin Variable Concept Extra Condensed Medium Italic";
+  src: url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot");
+  src: url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.svg#Acumin Variable Concept Extra Condensed Medium Italic") format("svg");
+}
+
+:root {
+  --default-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --heading-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --nav-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --foot-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+}
+
+/* -- Colori globali -- */
+:root{
+    --defoult-text-color: #36251E; /*Colore predefinito utilizzato per la maggior parte del contenuto testuale su tutto il sito web */
+    --heading-color: #BD8544;
+    --interaction-color: #A1450B;
+    --contrast-color: #ffffff;
+    --botton-color: #723C1A;
+    --body-color: #AC773A;
+    --bg-color: #DDD0AE;
+}
+
+
+/* -- General styling -- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d2c2a1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* -- Container styling -- */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.form-left, .form-right {
+    background-color: #a76b43;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+input {
+    width: 270px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.city-province, .cap-country {
+    display: flex;
+    gap: 10px;
+}
+
+.city-province input, .cap-country input {
+    width: 115px;
+}
+
+/* -- Button styling -- */
+
+.sign-in-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--botton-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sign-in-button:hover {
+    background-color: var(--interaction-color);
+}
+
+/* -- Logo styling -- */
+
+.logo {
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenitore per il logo uno */
+.logo-uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* Contenitore per il logo due */
+.logo-due {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-left: 100px; /* Margine di 100px tra i due container */
+}
+
+.logo-uno img {
+    margin-left: 130px;
+    width: 130px;
+    height: 118px;
+}
+
+.logo-due img {
+    margin-left: 150px;
+    width: 447px;
+    height: 87px;
+}
+
+#message-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    z-index: 9999;
+}

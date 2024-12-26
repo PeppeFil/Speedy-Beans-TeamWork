@@ -1,0 +1,445 @@
+/* Font */
+@import url(https://db.onlinewebfonts.com/c/066ce24dae3730ed6c648b09efaea93a?family=Acumin+Variable+Concept);
+
+@font-face {
+  font-family: "Acumin Variable Concept Extra Condensed Medium Italic";
+  src: url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot");
+  src: url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.svg#Acumin Variable Concept Extra Condensed Medium Italic") format("svg");
+}
+
+:root {
+  --default-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --heading-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --nav-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+  --foot-font: "Acumin Variable Concept Extra Condensed Medium Italic", sans-serif;
+}
+
+/*Colori globali*/
+:root{
+    --defoult-text-color: #36251E; /*Colore predefinito utilizzato per la maggior parte del contenuto testuale su tutto il sito web */
+    --heading-color: #BD8544; /*Colore per intestazioni, sottotitoli e titoli in tutto il sito web*/
+    --interaction-color: #A1450B; /*Colore di interazione. Viene utilizzato per pulsanti, link e altri elementi con cui si interagisce*/
+    --contrast-color: #ffffff;
+    --bg-color: #DDD0AE;
+}
+
+/*Nav Menu Color*/
+:root {
+    --nav-bg-color:#D4AB73;
+    --nav-botton-color: #723C1A;
+    --interaction-botton-color: #36251E; 
+}
+
+/*--- GENERALE --*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stile di base per i link di navigazione */
+nav a {
+  color: var(--defoult-text-color);
+  text-decoration: none;
+  font-family: var(--nav-font);
+  transition: color 0.3s ease;
+}
+
+/* Cambia colore quando il cursore passa sopra */
+nav a:hover {
+  color: var(--interaction-color);
+}
+
+/* Cambia colore quando il link viene cliccato */
+.navbar a:active {
+  color: var(--active-color);
+}
+
+body {
+  font-family: var(--default-font), sans-serif;
+  color: var(--defoult-text-color);
+  background-color: var(--bg-color);
+}
+
+
+/*--- HEADER --*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg-color);
+  padding: 10px 25px;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 130px;
+  height: 118px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-left: 40px;
+}
+
+.search-bar input {
+  width: 510px;
+  height: 45px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  color: var(--defoult-text-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.auth-buttons {
+  display: flex;
+  margin-right: 50px;
+  gap: 10px;
+}
+
+.auth-buttons .button{
+  display: inline-block;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--nav-botton-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.auth-buttons .signin {
+  background-color: var(--nav-botton-color);
+}
+
+/* Cambia colore quando il cursore passa sopra */
+.auth-buttons .botton:hover {
+  background-color: var(--interaction-color);
+}
+
+.header .navbar-logo {
+  line-height: 1;
+}
+
+.header .navbar-logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+
+.navbar {
+  display: block;
+  background-color: var(--nav-bg-color);
+  padding: 25px 25px;
+}
+
+.navbar-links {
+  display: inline;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0 10px; 
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--defoult-text-color);
+  font: var(--default-font);
+}
+
+.navbar-links a:hover {
+  color: var(--interaction-color);
+}
+
+
+/*====== HERO =====*/
+
+.section-bg {
+  background-image: url("/img/background-home-page.png"); /* Specifica il percorso dell'immagine */
+  background-size: cover; /* Rende l'immagine coprire tutto l'elemento */
+  background-position: center; /* Centra l'immagine all'interno dell'elemento */
+  background-repeat: no-repeat; /* Impedisce che l'immagine si ripeta */
+  height: 100vh; /* Imposta l'altezza dell'elemento a 100% dell'altezza del viewport */
+  color: var(--nav-hover-color); /* Imposta il colore del testo per un migliore contrasto */
+  display: flex;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1;
+    color: var(--heading-color); /* Similar color to the text in the image */
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 150px;
+    padding-left: 100px;
+}
+
+.hero-text h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    font-style: italic;
+}
+
+.hero-text p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    font-style: italic;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 50px;
+    margin-top: 80px;
+}
+
+.hero-image img {
+  width: 448px;
+  height: 478px;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .form-row {
+      flex-direction: column;
+  }
+
+  .form-left, .form-right {
+      min-width: 100%;
+  }
+
+  .hero-text {
+      text-align: left;
+  }
+
+  .hero-image {
+      text-align: center;
+  }
+}
+
+/*--- FOOTER --*/
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg-color);
+  color: var(--defoult-text-color);
+  padding: 10px 50px;
+  font-family: var(--foot-font);
+}
+
+.left-sides{
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 447px;
+  height: 87px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: inline;
+  align-items: center;
+  margin-left: 80px;
+}
+
+.footer-links a {
+  color: var(--defoult-text-color);
+  text-decoration: none;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Disporre gli elementi in colonna */
+  align-items: center; /* Centrare gli elementi orizzontalmente */
+  margin-left: 200px;
+  flex: 1;
+}
+
+.footer-social span {
+  margin-bottom: 10px;
+  color: var(--defoult-text-color);
+  text-align: center; /* Centrare il testo */
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center; /* Centrare le icone */
+}
+
+.footer-social a {
+  margin: 0 15px;
+}
+
+.footer-social .social-icon {
+  width: 56px;
+  height: 56px;
+}
+
+
+/*La seguente porzione di codice modifica la pagina dettaglioOrdineUtente */
+.order-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order-detail-table th, .order-detail-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.order-detail-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ccc;
+}
+
+.order-detail-table td {
+  background-color: #ffffff;
+}
+
+.order-detail-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.order-detail-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.order-detail-table tfoot td {
+  font-weight: bold;
+  background-color: #f4f4f4;
+}
+
+#message-modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(209, 166, 86);
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+/* Stile per la sezione hero */
+.hero-text-about {
+  display: flex;
+  font-family: var(--default-font);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Stile per il contenitore principale del testo */
+.paragrafo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Stile per il titolo */
+.paragrafo h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--defoult-text-color);
+}
+
+/* Stile per il paragrafo principale */
+.paragrafo p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-family: var(--default-font);
+  color: var(--defoult-text-color);
+  margin-bottom: 20px;
+}
+
+/* Stile per il secondo paragrafo */
+.paragrafo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.paragrafo2 p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-family: var(--default-font);
+  color: var(--defoult-text-color);
+  margin-bottom: 20px;
+}
